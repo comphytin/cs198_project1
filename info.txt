@@ -1,0 +1,8 @@
+- You should include a section on your website for each of the following:
+a basic introduction, hobbies, projects (don't have to be technical)
+- Two separate HTML pages with a links to traverse pages
+- At least 5 images in your website
+- Include a basic form on your website.
+- Include a bulleted list using the <ul> or <li> tags
+- Use basic tags to add titles, paragraphs, etc. to your website
+- Use the <meta> tag to specify metadata for your website.

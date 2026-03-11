@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+}
+
+#nav_bar {
+    overflow: hidden;
+    background-color: #a5b27d;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_bar a {
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    transition: 1s;
+}
+
+#nav_bar a:hover {
+    background-color:#859066;
+}
+
+.left_link {
+    float: left;
+}
+
+.right_link {
+    float: right;
+}

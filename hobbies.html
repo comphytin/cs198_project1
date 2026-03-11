@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depressed Chindo | Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Inter';
+            background-color: #d9d9d9;
+        }
+        h1 {
+            margin-left: 10px;
+
+            margin-bottom: 0px;
+        }
+        #main_section {
+            margin: 0;
+        }
+        
+        .container {
+            margin-top: 5px;
+            display:flex;
+            flex-wrap: wrap;
+            grid-template-columns: auto auto auto;
+            justify-content: center;
+        }
+        .container div {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            background-color: #b66162;
+            float: left;
+            width: 300px;
+            height: 275px;
+            box-sizing: border-box;
+        }
+
+        .container div:hover {
+            border: 4px solid black;
+        }
+
+        .container div h2 {
+            text-align: center;
+        }
+
+        .container div img {
+            padding: 10px 40px;
+            width: 55%;
+            height: 150px;
+            display: block;
+            margin: auto;
+            
+        }
+        
+        .fixedDiv {
+            position: fixed;
+            width: 75%;
+            height: 50%;
+            border: 2px solid black;
+            background-color: bisque;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            margin: 0;
+            z-index: 1000;
+        }
+
+        .fixedDiv div {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fixedDiv h1 {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        .fixedDiv p {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .innerDivButton {
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: red;
+            color: black;
+            border: 2px solid black;
+            font-size: 20px;
+            float: right;
+            margin-bottom: 12px;
+            margin-top: auto;
+        }
+        .innerDivButton:hover {
+            border: 2px solid white;
+            color: white;
+        }
+
+        #shadow {
+            display: none;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 900;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainSection = document.getElementById("main_section");
+
+            const map_analysis = document.getElementById("map_analysis");
+            const video_games = document.getElementById("video_games");
+            const learning_mandarin = document.getElementById("learning_mandarin");
+            const hip_hop = document.getElementById("hip_hop");
+            const reading_articles = document.getElementById("reading_articles");
+            const playing_the_piano = document.getElementById("playing_the_piano");
+            const shadow = document.getElementById("shadow");
+
+            const map_analysis_extra_info = document.getElementById("map_analysis_extra_info");
+            const video_games_extrainfo = document.getElementById("videogames_extra_info");
+            const learning_mandarin_extrainfo = document.getElementById("learningmandarin_extra_info");
+            const hip_hop_extrainfo = document.getElementById("hiphop_extrainfo");
+            const reading_articles_extrainfo = document.getElementById("readingarticles_extrainfo");
+            const playing_the_piano_extrainfo = document.getElementById("playingpiano_extrainfo");
+            
+            const arr = [map_analysis, video_games, learning_mandarin, hip_hop, reading_articles, playing_the_piano];
+            const arr_info = [map_analysis_extra_info, video_games_extrainfo, learning_mandarin_extrainfo, hip_hop_extrainfo, reading_articles_extrainfo, playing_the_piano_extrainfo];
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].addEventListener("click", () => {
+                    if (arr_info[i].style.display === "none") {
+                        arr_info[i].style.display = "block";
+                        shadow.style.display = "block";
+                    } 
+                })
+            }
+
+            //Buttons
+            const arr_buttons = [
+                document.getElementById("button_map"),
+                document.getElementById("button_video_games"),
+                document.getElementById("button_mandarin"),
+                document.getElementById("button_hiphop"),
+                document.getElementById("button_readingarticles"),
+                document.getElementById("button_playingthepiano"),
+            ];
+            for (let i = 0; i < arr_buttons.length; i++) {
+                arr_buttons[i].addEventListener("click", () => {
+                    if (arr_info[i].style.display === "none") {
+                        arr_info[i].style.display = "block";
+                        shadow.style.display = "none";
+                    } else {
+                        arr_info[i].style.display = "none";
+                        shadow.style.display = "none";
+                    }
+                });
+            }
+            
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Inner Divs-->
+    <div class="fixedDiv" id="map_analysis_extra_info" style="display: none;">
+        <div style="background-color: #55A299;">
+            <h1>Map Analysis</h1>
+        </div>
+        <div>
+            <p>I've always enjoyed analyzing maps from various places, whether it's fiction or non-fiction.</p>
+            <p>Favorite Maps:</p>
+            <ul>
+                <li>GTA 4</li>
+                <li>Yakuza Kiwami (Kamurocho)</li>
+                <li>The New York Subway System</li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button class="innerDivButton" id="button_map">Close Window</button>
+        </div>
+    </div>
+    <div class="fixedDiv" id="videogames_extra_info" style="display: none;">
+        <div style="background-color: #55A299;">
+            <h1>Video Games</h1>
+        </div>
+        <div>
+            <p>Video games have always been an important part of my life. I tend to enjoy video games that tell a compelling narrative or genius worldbuilding.</p>
+            <p>Favorite Games:</p>
+            <ul>
+                <li>Grand Theft Auto 4</li>
+                <li>Condemned: Criminal Origins</li>
+                <li>Hitman: Absolution</li>
+            </ul>
+        </div>
+        <div">
+            <button class="innerDivButton" id="button_video_games">Close Window</button>
+        </div>
+    </div>
+    <div class="fixedDiv" id="learningmandarin_extra_info" style="display: none;">
+        <div style="background-color: #55A299;">
+            <h1>Learning Mandarin</h1>
+        </div>
+        <div>
+            <p>I am a third-generation Chinese-Indonesian and my goal is to speak Mandarin fluently.</p>
+            <p>Benefits: </p>
+            <ul>
+                <li>Talk to Chinese girls (跟她们讲话语)</li>
+                <li>Work in Chinese-speaking regions</li>
+                <li>Understand more about Chinese culture</li>
+            </ul>
+        </div>
+        <div">
+            <button class="innerDivButton" id="button_mandarin">Close Window</button>
+        </div>
+    </div>
+    <div class="fixedDiv" id="hiphop_extrainfo" style="display: none;">
+        <div style="background-color: #55A299;">
+            <h1>Listening to Hip Hop</h1>
+        </div>
+        <div>
+            <p>I don't know why but listening to hip hop has kept me moving forward in life.</p>
+            <p>Favorite Albums:</p>
+            <ul>
+                <li>The Infamous by Mobb Deep</li>
+                <li>Illmatic by Nas</li>
+                <li>Mm..Food by MF DOOM</li>
+            </ul>
+        </div>
+        <div">
+            <button class="innerDivButton" id="button_hiphop">Close Window</button>
+        </div>
+    </div>
+    <div class="fixedDiv" id="readingarticles_extrainfo" style="display: none;">
+        <div style="background-color: #55A299;">
+            <h1>Reading Articles</h1>
+        </div>
+        <div>
+            <p>I love learning about new things.</p>
+            <p>Articles that I Usually Read:</p>
+            <ul>
+                <li>Any article from Wikipedia</li>
+                <li>News Articles</li>
+            </ul>
+        </div>
+        <div">
+            <button class="innerDivButton" id="button_readingarticles">Close Window</button>
+        </div>
+    </div>
+    <div class="fixedDiv" id="playingpiano_extrainfo" style="display: none;">
+        <div style="background-color: #55A299;">
+            <h1>Playing the Piano</h1>
+        </div>
+        <div>
+            <p>I've been playing the piano since I was 5 years old. Even though I'm not an expert, I enjoy playing the piano in my spare time to feel emotional about a certain event or person.</p>
+            <p>Favorite Songs that I Play on the Piano:</p>
+            <ul>
+                <li>GTA 4 - Liberty City Nocturne</li>
+                <li>Someone in the Crowd (La La Land)</li>
+                <li>City of Stars (La La Land)</li>
+            </ul>
+        </div>
+        <div">
+            <button class="innerDivButton" id="button_playingthepiano">Close Window</button>
+        </div>
+    </div>
+    <!--Code for Inner Divs Ends here-->
+    <div id="shadow"></div>
+    <nav id="nav_bar">
+        <a href="index.html" class="left_link">austin_adithia</a>
+        <a href="about.html" class="right_link">About</a>
+        <a href="projects.html" class="right_link">Projects</a>
+        <a href="hobbies.html" class="right_link">Hobbies</a>
+        <a href="index.html" class="right_link">Home</a>
+    </nav>
+    
+    <h1>Some of my Personal Hobbies</h1>
+    
+    
+    
+    <section id="main_section">
+        <div class="container">
+            <div id="map_analysis">
+                <img src="img/subway_map.jpg" alt="">
+                <h2>Map Analysis</h2>
+            </div>
+            <div id="video_games">
+                <img src="img/agent47.png" alt="">
+                <h2>Video Games</h2>
+            </div>
+            <div id="learning_mandarin">
+                <img src="img/putonghua.png" alt="">
+                <h2>Learning Mandarin</h2>
+            </div>
+            <div id="hip_hop">
+                <img src="img/mobbdeep_theinfamous.jpg" alt="">
+                <h2>Hip Hop</h2>
+            </div>
+            <div id="reading_articles">
+                <img src="img/reading_articles.jpg" alt="">
+                <h2>Reading Articles</h2>
+            </div>
+            <div id="playing_the_piano">
+                <img src="img/playing_the_piano.jpeg" alt="">
+                <h2>Playing the Piano</h2>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
