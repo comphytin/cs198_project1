@@ -37,10 +37,13 @@
             width: 300px;
             height: 275px;
             box-sizing: border-box;
+            transition: 1s;
         }
 
         .container div:hover {
-            border: 4px solid black;
+            width: 320px;
+            color: white;
+            background-color: black;
         }
 
         .container div h2 {
@@ -66,15 +69,17 @@
             left: 50%;
             transform: translate(-50%, -50%);
             justify-content: center;
-            margin: 0;
+            
             z-index: 1000;
+            display: flex;
+            padding: 0px;
         }
 
         .fixedDiv div {
             display: inline-block;
             width: 100%;
-            margin: 0;
-            padding: 0;
+            
+            padding: 0px;
         }
 
         .fixedDiv h1 {
@@ -97,11 +102,22 @@
             font-size: 20px;
             float: right;
             margin-bottom: 12px;
-            margin-top: auto;
+            margin-top: 15px;
         }
         .innerDivButton:hover {
             border: 2px solid white;
             color: white;
+        }
+
+        .MiddleDiv {
+            height: 65%;
+            background-color: white;
+            margin-top: auto;
+        }
+
+        .bottomDiv {
+            
+            height: 15%;
         }
 
         #shadow {
@@ -174,7 +190,7 @@
         <div style="background-color: #55A299;">
             <h1>Map Analysis</h1>
         </div>
-        <div>
+        <div class="MiddleDiv">
             <p>I've always enjoyed analyzing maps from various places, whether it's fiction or non-fiction.</p>
             <p>Favorite Maps:</p>
             <ul>
@@ -185,7 +201,7 @@
         </div>
         <br>
         <br>
-        <div>
+        <div class="bottomDiv">
             <button class="innerDivButton" id="button_map">Close Window</button>
         </div>
     </div>
@@ -193,8 +209,8 @@
         <div style="background-color: #55A299;">
             <h1>Video Games</h1>
         </div>
-        <div>
-            <p>Video games have always been an important part of my life. I tend to enjoy video games that tell a compelling narrative or genius worldbuilding.</p>
+        <div class="MiddleDiv">
+            <p>Video games have always been an important part of my life. I tend to enjoy video games that tell a compelling narrative.</p>
             <p>Favorite Games:</p>
             <ul>
                 <li>Grand Theft Auto 4</li>
@@ -202,7 +218,9 @@
                 <li>Hitman: Absolution</li>
             </ul>
         </div>
-        <div">
+        <br>
+        <br>
+        <div class="bottomDiv">
             <button class="innerDivButton" id="button_video_games">Close Window</button>
         </div>
     </div>
@@ -210,7 +228,7 @@
         <div style="background-color: #55A299;">
             <h1>Learning Mandarin</h1>
         </div>
-        <div>
+        <div class="MiddleDiv">
             <p>I am a third-generation Chinese-Indonesian and my goal is to speak Mandarin fluently.</p>
             <p>Benefits: </p>
             <ul>
@@ -219,7 +237,9 @@
                 <li>Understand more about Chinese culture</li>
             </ul>
         </div>
-        <div">
+        <br>
+        <br>
+        <div class="bottomDiv">
             <button class="innerDivButton" id="button_mandarin">Close Window</button>
         </div>
     </div>
@@ -227,7 +247,7 @@
         <div style="background-color: #55A299;">
             <h1>Listening to Hip Hop</h1>
         </div>
-        <div>
+        <div class="MiddleDiv">
             <p>I don't know why but listening to hip hop has kept me moving forward in life.</p>
             <p>Favorite Albums:</p>
             <ul>
@@ -236,7 +256,9 @@
                 <li>Mm..Food by MF DOOM</li>
             </ul>
         </div>
-        <div">
+        <br>
+        <br>
+        <div class="bottomDiv">
             <button class="innerDivButton" id="button_hiphop">Close Window</button>
         </div>
     </div>
@@ -244,7 +266,7 @@
         <div style="background-color: #55A299;">
             <h1>Reading Articles</h1>
         </div>
-        <div>
+        <div class="MiddleDiv">
             <p>I love learning about new things.</p>
             <p>Articles that I Usually Read:</p>
             <ul>
@@ -252,7 +274,9 @@
                 <li>News Articles</li>
             </ul>
         </div>
-        <div">
+        <br>
+        <br>
+        <div class="bottomDiv">
             <button class="innerDivButton" id="button_readingarticles">Close Window</button>
         </div>
     </div>
@@ -260,7 +284,7 @@
         <div style="background-color: #55A299;">
             <h1>Playing the Piano</h1>
         </div>
-        <div>
+        <div class="MiddleDiv">
             <p>I've been playing the piano since I was 5 years old. Even though I'm not an expert, I enjoy playing the piano in my spare time to feel emotional about a certain event or person.</p>
             <p>Favorite Songs that I Play on the Piano:</p>
             <ul>
@@ -269,7 +293,9 @@
                 <li>City of Stars (La La Land)</li>
             </ul>
         </div>
-        <div">
+        <br>
+        <br>
+        <div class="bottomDiv">
             <button class="innerDivButton" id="button_playingthepiano">Close Window</button>
         </div>
     </div>
@@ -280,7 +306,7 @@
         <a href="about.html" class="right_link">About</a>
         <a href="projects.html" class="right_link">Projects</a>
         <a href="hobbies.html" class="right_link">Hobbies</a>
-        <a href="index.html" class="right_link">Home</a>
+        
     </nav>
     
     <h1>Some of my Personal Hobbies</h1>
